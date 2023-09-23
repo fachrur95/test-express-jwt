@@ -1,7 +1,7 @@
 {
   "name": "test-express-jwt",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.ts",
   "keywords": [],
   "author": "Fachrur Razi",
   "scripts": {
@@ -9,7 +9,6 @@
     "dev": "cross-env NODE_ENV=development nodemon src/index.ts",
     "build": "rimraf build && tsc -p tsconfig.json",
     "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add build",
     "db:push": "prisma db push",
     "db:studio": "prisma studio"
   },
