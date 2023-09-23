@@ -4,13 +4,14 @@ import { authService, userService, tokenService } from '../services';
 import exclude from '../utils/exclude';
 import { User } from '@prisma/client';
 import { CookieOptions } from 'express';
+import config from '../config/config';
 
 const cookieOptions = (expires: Date): CookieOptions => {
   return {
     httpOnly: true,
     signed: true,
     expires,
-    secure: false //--> SET TO TRUE ON PRODUCTION
+    secure: config.env === "production" //--> SET TO TRUE ON PRODUCTION
   }
 }
 
